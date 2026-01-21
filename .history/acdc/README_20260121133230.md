@@ -1,0 +1,86 @@
+# Hybrid - AC/DC CIGRE Low-Voltage Benchmarks 
+## This repository provides the reference simulation models and framework
+The code supports reproducible evaluation of multiple hybrid AC/DC distribution
+network topologies under realistic operating conditions, using the CIGRE European
+Low-Voltage benchmark grid.
+
+# Overview
+- **Benchmark system:** CIGRE European Low-Voltage network
+- **Topologies:**
+ 1. Topology-1: End-of-feeder AC/DC links
+ 2. Topology-2: Mixed wiring (single-phase AC + two-wire DC)
+ 3. Topology-3: Fully hybrid AC/DC network (parallel DC grid)
+
+- **Control strategy:**
+  - Decentralized droop control
+
+- **Simulation platform:** PyDAE (Python Differential-Algebraic Equations)
+- **Operating scenarios:**
+  1. Load-1: AC overloading
+  2. Load-2: High DC penetration
+
+- **Evaluation metrics:**
+  - Bus voltage regulation
+  - Feeder current limits
+  - Statistical distribution (box-plot analysis)
+
+All simulations are conducted over realistic 24-hour load profiles, enabling
+fair comparison of topology behavior under dynamic and stressed operating conditions.
+
+# Repository Structure files.
+
+
+# Files and folders
+## Topology-1
+- **Topology-1:** acdc_link: CIGRE European LV network based AC/DC benchmark with end-of-feeder AC/DC links (Topology-1) then file name "droops"
+
+### Run files:
+- **First run: Builder:** cigre_eu_lv_acdc_link_builder.ipynb
+  1. cigre_eu_lv_acdc_link_ini_No_Droop_T1_L1.ipynb: Topology-1, Load-1, without droop.
+  2. cigre_eu_lv_acdc_link_ini_Droop_T1_L1.ipynb: Topology-1, Load-1, with droop.
+  3. cigre_eu_lv_acdc_link_ini_No_Droop_T1_L2.ipynb: Topology-1, Load-2, without droop.
+  4. cigre_eu_lv_acdc_link_ini_Droop_T1_L2.ipynb: Topology-1, Load-2, with droop.
+
+## Topology-2
+- **Topology-2:** acdc_4w: CIGRE European LV network based AC/DC benchmark with single-phase AC (phase + neutral) and two DC wires (Topology-2) then file name "droop"
+
+### Run files:
+- **First run: Builder:** cigre_eu_lv_acdc_4w_builder.ipynb
+  1. cigre_eu_lv_acdc_4w_ini_No_Droop_T2_L2.ipynb: Topology-2, Load-2, without droop
+  2. cigre_eu_lv_acdc_4w_ini_Droop_T2_L2.ipynb: Topology-2, Load-2, with droop
+
+## Topology-3
+- **Topology-3:** acdc_6w: CIGRE European LV network based AC/DC benchmark with 4 AC wires and 2 DC wires (Topology-3) then file name "droops"
+
+### Run files:
+- **First run: Builder:** cigre_eu_lv_acdc_6w_builder.ipynb
+  1. cigre_eu_lv_acdc_6w_ini_No_Droop_T3_L1.ipynb: Topology-3, Load-1, without droop
+  2. cigre_eu_lv_acdc_6w_ini_Droop_T3_L1.ipynb: Topology-3, Load-1, with droop
+  3. cigre_eu_lv_acdc_6w_ini_No_Droop_T3_L2.ipynb: Topology-3, Load-2, without droop
+  4. cigre_eu_lv_acdc_6w_ini_Droop_T3_L2.ipynb: Topology-3, Load-2, with droop
+
+
+# Plotting:
+  - **Data and Figures (file)**
+  - **File name (New plot):** post-processing and plotting notebooks
+
+### Run files:
+  - **For Currents:** Current Box Plotting Topologies_V2.ipynb
+  - **For Voltages:** Voltage Box Plotting Topologies_V2.ipynb
+
+# Notes
+  1. Bus voltages and feeder currents are saved in each run notebook for post-processing.
+  2. Builder notebooks must be executed before running any topology.
+  3. Load cases: - **Case 1 → Load-1** AND - **Case 3 → Load-2**
+
+# Requirements
+- Python ≥ 3.10.9
+- Jupyter Notebook / JupyterLab
+- PyDAE
+- NumPy
+- SciPy
+- Matplotlib
+
+# License
+This project is released under the MIT License, allowing reuse, modification,
+and extension with proper attribution.
