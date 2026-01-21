@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: acdc_7bus/acdc_7bus
+- file: acdc_link/acdc_link
+- file: acdc_6w/acdc_6w
+- file: acdc_4w/acdc_4w
+
