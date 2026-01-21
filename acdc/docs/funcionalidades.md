@@ -1,3 +1,0 @@
-# Funcionalidades
-
-## Introducción
