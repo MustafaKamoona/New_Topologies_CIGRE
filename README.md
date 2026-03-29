@@ -76,6 +76,12 @@ fair comparison of topology behavior under dynamic and stressed operating condit
   2. Builder notebooks must be executed before running any topology.
   3. Load cases: - **Case 1 → Load-1** AND - **Case 3 → Load-2**
 
+**Mustafa A. Kamoona, Juan Manuel Mauricio (2026)**
+Hybrid AC/DC Topologies for the CIGRE Low-Voltage Benchmark Performance Evaluation
+Published in Eng (MDPI).
+
+DOI: [10.3390/eng7040147](https://www.mdpi.com/2673-4117/7/4/147)
+
 # Requirements
 - Python ≥ 3.10.9
 - Jupyter Notebook / JupyterLab
