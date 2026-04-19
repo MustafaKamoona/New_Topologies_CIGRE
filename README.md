@@ -4,6 +4,9 @@ The code supports reproducible evaluation of multiple hybrid AC/DC distribution
 network topologies under realistic operating conditions, using the CIGRE European
 Low-Voltage benchmark grid.
 
+📄 **Paper:**  
+👉 https://www.mdpi.com/2673-4117/7/4/147
+
 - **Zenodo**
 [![DOI](https://zenodo.org/badge/1138947125.svg)](https://doi.org/10.5281/zenodo.18325626)
 
